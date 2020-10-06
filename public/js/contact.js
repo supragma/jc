@@ -24,7 +24,7 @@
             
            $.ajax({
              type: "POST",
-             url : "send.php",    
+             url : "contact",    
              data: "name=" + name + "&email=" + email + "&subject=" + "You Got Email" + "&message=" + message,
              success: function(data){    
               if(data == 'success'){
