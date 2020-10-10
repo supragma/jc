@@ -17,8 +17,50 @@ background:#fff;
 text-shadow:none !important;
 }
 
+#container-main {
+  position: relative;
+  text-align: center;
+}
+
+.centered-main {
+  color: white;
+  text-align: center;
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  font-size: 30px; 
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centered-sub-main {
+  color: white;
+  text-align: center;
+  font-family:"Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 20px; 
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centered-main-button {
+  background-color: #cc0000;
+  color: white;
+  text-align: center;
+  font-family:"Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 18px; 
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  padding: 15px 32px;
+  border: none;
+}
+
 #wrapper{
-	overflow:hidden;
+  overflow:hidden;
 }
 
 /*------------------------------ 
