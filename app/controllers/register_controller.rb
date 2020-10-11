@@ -19,9 +19,9 @@ class RegisterController < ApplicationController
     elsif params["Tribes"] == 'Asher'
       new_node = Asher.new
       new_node.id = Asher.count + 1
-    elsif params["Tribes"] == 'Naphatali'
-      new_node = Naphatali.new
-      new_node.id = Naphatali.count + 1
+    elsif params["Tribes"] == 'Naphtali'
+      new_node = Naphtali.new
+      new_node.id = Naphtali.count + 1
     elsif params["Tribes"] == 'Manasseh'
       new_node = Manasseh.new
       new_node.id = Manasseh.count + 1
@@ -39,7 +39,7 @@ class RegisterController < ApplicationController
       new_node.id = Zebulun.count + 1
     elsif params["Tribes"] == 'Joseph'
       new_node = Joseph.new
-      new_node.id = Joesph.count + 1
+      new_node.id = Joseph.count + 1
     elsif params["Tribes"] == 'Benjamin'
       new_node = Benjamin.new
       new_node.id = Benjamin.count + 1
@@ -54,7 +54,7 @@ class RegisterController < ApplicationController
     new_node.right_id = 0
     new_node.save!
 
-    parent = assign_parent
+    parent = assign_parent(new_node)
     if parent == nil
       welcome_first_tribe_member(parent)
     else
@@ -79,6 +79,7 @@ class RegisterController < ApplicationController
 private
   # Assign the parent node to a new child node.
   def assign_parent(child)
+    return nil
     # TODO 
   end
 
