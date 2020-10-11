@@ -1,0 +1,2 @@
+class Asher < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class Benjamin < ApplicationRecord
+end

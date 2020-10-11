@@ -1,0 +1,2 @@
+class Zebulun < ApplicationRecord
+end

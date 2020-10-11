@@ -1,0 +1,2 @@
+class Gad < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class Reuben < ApplicationRecord
+end

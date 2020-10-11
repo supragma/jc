@@ -1,0 +1,2 @@
+class Judah < ApplicationRecord
+end

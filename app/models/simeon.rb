@@ -1,0 +1,2 @@
+class Simeon < ApplicationRecord
+end
