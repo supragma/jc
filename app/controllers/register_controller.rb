@@ -48,8 +48,8 @@ class RegisterController < ApplicationController
       raise "Tribe was not assgined probably due to a typo."
     end
 
-    new_node.first_name = params["firstname"]
-    new_node.last_name = params["lastname"]
+    new_node.first_name = params["first_name"]
+    new_node.last_name = params["last_name"]
     new_node.email = params["email"]
     new_node.left_id = 0
     new_node.right_id = 0
