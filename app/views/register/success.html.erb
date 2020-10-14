@@ -67,7 +67,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>Register</h1>
+                        <h1>Success!</h1>
                     </div>
                 </div>
             </div>
@@ -80,34 +80,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <div id="contact-form-wrapper">
-                            <div class="contact_form_holder">
-                                <form id="register" class="row" name="form1" method="post" action="register">
-                                    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-
-                                    <input type="text" class="form-control" name="first_name" id="first_name" placeholder="Your First Name" />
-                                    <input type="text" class="form-control" name="last_name" id="first_name" placeholder="Your Last Name" />
-
-                                    <input type="text" class="form-control" name="email" id="email" placeholder="Your email" />
-                                    Select Your Tribe:
-                                    <%= select_tag "Tribes", options_for_select(@tribes) %> 
-                                    <br>
-                                    <br>
-                                    <p id="btnsubmit">
-                                        <input type="submit" value="Send" class="btn btn-custom" />
-                                    </p>
-                                </form>
-                            </div>
-                        </div>
+                       <div id="contact-form-wrapper">
+                         <img src="/img/hahayes.png" alt="porcupin" style="width: 100%;"></a> 
+                       </div>
                     </div>
 
                     <div class="col-md-6 text-center">
                         <div class="contact-info">
-
                             <div class="social-icons">
                                 <a href="https://www.facebook.com/Jesus-Christ-and-Super-Pals-100805645147311/?modal=admin_todo_tour"><i class="fa fa-facebook"></i></a>
                             </div>
-
                             <div class="divider-line"></div>
 
                             <span class="title">Telephone:</span>
