@@ -4,9 +4,10 @@ class RegisterController < ApplicationController
   MAX_NODES = 12000
 
   # POST to create a registration. Assign left and right nodes based on id.
-  # IDs are divided by two and taken the ceiling to assign it to a parent node.
+  # IDs are divided by two and taken the floor to assign it to a parent node.
   # If it is an ID of 1, then it is a root node.
   def new
+    parent_id = 0
     if params["Tribes"] == 'Judah'
       new_node = Judah.new
       new_node.id = Judah.count + 1
@@ -79,8 +80,47 @@ class RegisterController < ApplicationController
 private
   # Assign the parent node to a new child node.
   def assign_parent(child)
-    return nil
-    # TODO 
+    if child.id == 1
+      return nil
+    end
+    parent = nil
+    parent_id = (child.id.to_f/2.0).floor()
+    if params["Tribes"] == 'Judah'
+      parent = Judah.find_by_id(parent_id)
+    elsif params["Tribes"] == 'Reuben'
+      parent = Reuben.find_by_id(parent_id)
+    elsif params["Tribes"] == 'Gad'
+      parent = Gad.find_by_id(parent_id)
+    elsif params["Tribes"] == 'Asher'
+      parent = Asher.find_by_id(parent_id)
+    elsif params["Tribes"] == 'Naphtali'
+      parent = Naphtali.find_by_id(parent_id)
+    elsif params["Tribes"] == 'Manasseh'
+      parent = Manasseh.find_by_id(parent_id)
+    elsif params["Tribes"] == 'Simeon'
+      parent = Simeon.find_by_id(parent_id)
+    elsif params["Tribes"] == 'Levi'
+      parent = Levi.find_by_id(parent_id)
+    elsif params["Tribes"] == 'Issachar'
+      parent = Issachar.find_by_id(parent_id)
+    elsif params["Tribes"] == 'Zebulun'
+      parent = Zebulun.find_by_id(parent_id)
+    elsif params["Tribes"] == 'Joseph'
+      parent = Joseph.find_by_id(parent_id)
+    elsif params["Tribes"] == 'Benjamin'
+      parent = Benjamin.find_by_id(parent_id)
+    else
+      raise "Tribe was not assgined probably due to a typo."
+    end
+    if parent.left_id == 0
+      parent.left_id = child.id
+    elsif parent.right_id == 0
+      parent.right_id = child.id
+    else
+      raise "Both left and right nodes were already assigned"
+    end
+    parent.save!
+    return parent
   end
 
   # Notify the parent node they have a new direct report.
