@@ -69,7 +69,11 @@ class RegisterController < ApplicationController
   def register
     # Figure out the list of available tribes.
     @tribes = get_tribes()
-    render 'register'
+    if @tribes == []
+      render 'registrationclosed'
+    else
+      render 'register'
+    end
   end
 
   # GET page to show on success.
