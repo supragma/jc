@@ -57,10 +57,10 @@ class RegisterController < ApplicationController
 
     parent = assign_parent(new_node)
     if parent == nil
-      welcome_first_tribe_member(parent)
+      welcome_first_tribe_member
     else
-      notify_parent(parent, new_node)
-      notify_child(parent, new_node)
+      notify_team_lead(parent)
+      notify_new_member(parent)
     end
     redirect_to success_path
   end
@@ -124,18 +124,31 @@ private
   end
 
   # Notify the parent node they have a new direct report.
-  def notify_parent(parent, child)
-    #TODO
+  def notify_team_lead(parent)
+    NotifyTeamLeaderMailer.notify_team_leader(parent.email,
+                                              parent.first_name,
+                                              params["email"],
+                                              params["first_name"],
+                                              params["last_name"],
+                                              params["Tribes"]).deliver
   end
 
   # Notify the child they have a supervisor.
-  def notify_child(parent, child)
-    #TODO
+  def notify_new_member(parent)
+    NotifyNewMemberMailer.notify_new_member(params["email"],
+                                            params["first_name"],
+                                            parent.email,
+                                            parent.first_name,
+                                            parent.last_name,
+                                            params["Tribes"]).deliver
+
   end
 
   # Welcome the first member of the tribe with id = 0
-  def welcome_first_tribe_member(parent)
-    #TODO
+  def welcome_first_tribe_member
+    WelcomeFirstTribeMemberMailer.welcome_first_tribe_member(params["email"],
+                                                             params["first_name"],
+                                                             params["Tribes"]).deliver
   end
 
   # Get the list of tribes one can join.
