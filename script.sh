@@ -1,0 +1,12 @@
+rails generate model Judah email:string first_name:string last_name:string left_id:integer right_id:integer
+rails generate model Reuben email:string first_name:string last_name:string left_id:integer right_id:integer
+rails generate model Gad email:string first_name:string last_name:string left_id:integer right_id:integer
+rails generate model Asher email:string first_name:string last_name:string left_id:integer right_id:integer
+rails generate model Naphtali email:string first_name:string last_name:string left_id:integer right_id:integer
+rails generate model Manasseh email:string first_name:string last_name:string left_id:integer right_id:integer
+rails generate model Simeon email:string first_name:string last_name:string left_id:integer right_id:integer
+rails generate model Levi email:string first_name:string last_name:string left_id:integer right_id:integer
+rails generate model Issachar email:string first_name:string last_name:string left_id:integer right_id:integer
+rails generate model Zebulun email:string first_name:string last_name:string left_id:integer right_id:integer
+rails generate model Joseph email:string first_name:string last_name:string left_id:integer right_id:integer
+rails generate model Benjamin email:string first_name:string last_name:string left_id:integer right_id:integer

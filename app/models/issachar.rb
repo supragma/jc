@@ -1,0 +1,2 @@
+class Issachar < ApplicationRecord
+end

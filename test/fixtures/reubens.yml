@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  first_name: MyString
+  last_name: MyString
+  left_id: 0
+  right_id: 0
+  id: 1
+
+two:
+  email: MyString
+  first_name: MyString
+  last_name: MyString
+  left_id: 0
+  right_id: 0
+  id: 2
+
+three:
+  email: MyString
+  first_name: MyString
+  last_name: MyString
+  left_id: 1
+  right_id: 1
+  id: 3

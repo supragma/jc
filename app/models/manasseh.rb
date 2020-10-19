@@ -1,0 +1,2 @@
+class Manasseh < ApplicationRecord
+end
